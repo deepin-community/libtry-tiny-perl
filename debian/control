@@ -1,0 +1,30 @@
+Source: libtry-tiny-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ansgar Burchardt <ansgar@debian.org>,
+           Salvatore Bonaccorso <carnil@debian.org>,
+           gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: libcapture-tiny-perl,
+                     perl,
+                     perl (>= 5.21.4) | libsub-name-perl
+Standards-Version: 4.1.2
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libtry-tiny-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libtry-tiny-perl.git
+Homepage: https://metacpan.org/release/Try-Tiny
+Rules-Requires-Root: no
+
+Package: libtry-tiny-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Suggests: perl (>= 5.21.4) | libsub-name-perl
+Description: module providing minimalistic try/catch
+ Try::Tiny is a Perl module that provides bare bones try/catch statements. It
+ is designed to eliminate common mistakes with eval blocks, and NOTHING else.
+ .
+ The main focus of this module is to provide simple and reliable error
+ handling for those having a hard time installing TryCatch, but who still want
+ to write correct eval blocks without 5 lines of boilerplate each time.
